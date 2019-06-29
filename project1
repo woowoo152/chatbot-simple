@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<!-- thêm thuộc tính font-weight: bold cho id -->
+<style>
+
+
+#name, #city, #mobile, #email, #job, #age {font-weight: bold;}
+	
+ 	
+</style>
+<body>
+<!-- tạo thẻ div có thuộc tính style="display:none;" trong thẻ <div> định nghĩa button có giá trị trị text “Bước tiếp theo” -->
+
+<div id="show" style="display:none"><button> Bước tiếp theo </button> </div>
+
+<!-- tạo các id để gán giá trị. -->
+
+<p id="name"></p>
+<p id="city"></p>
+<p id="mobile"></p>
+<p id="email"></p>
+<p id="job"></p>
+<p id="age"></p>
+
+
+<script>
+
+// hàm notify để nhập tên, chỗ ở, số điện thoại,...
+
+function notify() {
+   alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên");
+	
+   var name = prompt("Hãy nhập tên của bạn");
+	if(name !=null) {
+	document.getElementById("name").innerHTML = "Tên: " + name;
+	}
+   var city = prompt("Hãy nhập thành phố bạn đang sống");
+	if(city !=null) {
+	document.getElementById("city").innerHTML = "Chỗ ở hiện nay: " + city;
+	}
+   var mobile = prompt("Hãy nhập số điện thoại của bạn");
+	if(mobile !=null) {
+	document.getElementById("mobile").innerHTML = "Số điện thoại: " + mobile;
+	}
+   var email = prompt("Hãy nhập email của bạn");
+	if(email !=null) {
+	document.getElementById("email").innerHTML = "Email: " + email;
+	}
+   var job = prompt("Hãy nhập công việc hiện nay của bạn");
+	if(job !=null) {
+	document.getElementById("job").innerHTML = "Nghề nghiệp: " + job;
+	}
+   var age = prompt("Hãy nhập năm sinh của bạn");
+	if(age !=null) {
+	document.getElementById("age").innerHTML = "Sinh năm: " + age;
+	}
+
+   document.getElementById("show").style.display = "block";
+}
+// Gọi hàm notify
+
+notify();
+
+</script>
+
+</body>
+</html>
+
+
